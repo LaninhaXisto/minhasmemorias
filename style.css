@@ -1,0 +1,364 @@
+/* Estilos gerais */
+body {
+    font-family: 'Raleway', sans-serif; /* Fonte alterada */
+    background-color: #f7ebe2;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Elementos de fundo animados */
+.background-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Fica atrás dos outros conteúdos */
+}
+
+.background-elements:before,
+.background-elements:after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: moveElement 10s infinite alternate;
+}
+
+.background-elements:before {
+    background-color: rgba(255, 140, 105, 0.5);
+    top: 10%;
+    left: 10%;
+}
+
+.background-elements:after {
+    background-color: rgba(44, 125, 160, 0.5);
+    top: 50%;
+    left: 60%;
+    animation-duration: 15s;
+}
+
+@keyframes moveElement {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(20px, 20px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 140, 105, 0.9);
+    text-align: center;
+    padding: 80px 0;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.header-content img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-content h1 {
+    font-family: 'Lobster', cursive; /* Fonte alterada */
+    font-size: 3.5em;
+    color: #ff5733;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #3d3d3d;
+}
+
+/* Seção de Habilidades */
+.skills {
+    background-color: rgba(255, 179, 128, 0.7); /* Fundo colorido transparente */
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.skills h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: relative;
+    font-size: 2.5em;
+    color: #2C7DA0;
+    margin-bottom: 0;
+    text-align: center; /* Removido o espaçamento entre título e habilidades */
+}
+
+.skills ul {
+    margin-top: 20px; /* Mantido */
+    text-align: center;
+    position: relative;
+}
+
+.skills ul li {
+    font-family: 'Roboto Slab', serif;
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.2em;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid #ff5733;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.skills ul li:hover {
+    background-color: rgba(255, 140, 105, 0.7);
+    transform: scale(1.1);
+    text-align: center;
+    position: relative;
+}
+
+/* Seção de Projetos */
+.projects {
+    background-color: rgba(255, 204, 128, 0.7); /* Fundo colorido transparente */
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.projects h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    color: #ff7043;
+}
+
+.project-item {
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    background-color: #ffcc80; /* Cor do fundo */
+    border: 2px solid #2C7DA0; /* Borda */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.project-item img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #2C7DA0;
+}
+
+.project-item p {
+    font-size: 0.9em;
+    color: #3d3d3d;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para o modal */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto; /* Reduzi a margem superior */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Reduzi a largura para 50% */
+    max-width: 500px; /* Defini um limite de largura máxima */
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%; 
+    height: auto;
+    max-height: 250px; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Footer */
+footer {
+    background-color: rgba(255, 140, 105, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste geral do modal */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Imagens dentro do modal */
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Media Query para telas menores (celulares) */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Modal ocupa 90% da tela em celulares */
+        margin: 10% auto; /* Aumenta um pouco a margem superior em telas pequenas */
+        max-width: none; /* Remove o limite de largura */
+    }
+
+    .modal-image {
+        max-height: 200px; /* Diminui a altura máxima da imagem em celulares */
+    }
+
+    /* Ajustes no conteúdo do modal */
+    .modal-content h2 {
+        font-size: 1.5em; /* Título um pouco menor para caber em telas menores */
+    }
+
+    .modal-content p {
+        font-size: 1em; /* Texto um pouco menor */
+    }
+}
+ 
+/* Animação de flores */
+/* Animação de flores */
+.flower-animation, .flower-footer {
+    background: url('img/b933d446eb850c71a7d4d10db9466fd8-removebg-preview.png') no-repeat center;
+    background-size: contain;
+    width: 80px; /* Largura da flor */
+    height: 80px; /* Altura da flor */
+    position: absolute;
+    animation: floatUp 8s infinite ease-in-out;
+    opacity: 0; /* Inicia invisível */
+}
+
+/* Posicionamento das flores no modal */
+.flower1 {
+    left: 20%; /* Flor posicionada à esquerda */
+    bottom: 20px;
+    animation-delay: 0s;
+}
+
+.flower2 {
+    left: 50%; /* Flor no centro */
+    bottom: 50px;
+    animation-delay: 2s;
+}
+
+.flower3 {
+    left: 80%; /* Flor à direita */
+    bottom: 80px;
+    animation-delay: 4s;
+}
+
+/* Keyframes para animação de subida */
+@keyframes floatUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* Para o rodapé */
+.flower-footer.flower1 {
+    left: 10%;
+    bottom: 0;
+}
+
+.flower-footer.flower2 {
+    left: 50%;
+    bottom: 0;
+    animation-delay: 3s;
+}
+
+.flower-footer.flower3 {
+    left: 90%;
+    bottom: 0;
+    animation-delay: 6s;
+}
+
+* {
+    box-sizing: border-box; 
+}

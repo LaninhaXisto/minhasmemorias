@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfóliodeAlla</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Elementos de fundo animados -->
+<div class="background-elements"></div>
+
+<!-- Cabeçalho -->
+<header>
+    <div class="header-content">
+        <img src="img/euneveyr.png" alt="Imagem do Artista no caso eu ">
+        <h1>Allana Manuely Xisto</h1>
+        <p>Bem-vindos ao meu mundo criativo, onde arte e emoção se encontram!</p>
+    </div>
+</header>
+
+<!-- Seção de Habilidades -->
+<section class="skills">
+    <h2>Minhas Habilidades</h2>
+    <ul>
+        <li>Desenho</li>
+        <li>Criatividade</li>
+        <li>Designer</li>
+    </ul>
+</section>
+
+<!-- Seção de Projetos -->
+<section class="projects">
+    <h2>Páginas da minha história.</h2>
+
+    <!-- Projeto 1 -->
+    <div class="project-item" onclick="openModal('projeto1')">
+        <img src="img/nos4veyr.jpeg" alt="Eu e as meninas juntas">
+        <h3>
+            Inigualáveis.
+        </h3>
+        <p>Nossas almas dançam juntas.</p>
+    </div>
+
+    <!-- Projeto 2 -->
+    <div class="project-item" onclick="openModal('projeto2')">
+        <img src="img/WhatsApp Image 2024-10-12 at 15.50.11.jpeg" alt="Eu e a Gabi no laboratório de informatica">
+        <h3>Ímpar.</h3>
+        <p>Uma luz constante.</p>
+    </div>
+
+    <!-- Projeto 3 -->
+    <div class="project-item" onclick="openModal('projeto3')">
+        <img src="img/victorecarloscoração.jpeg" alt="Victor e Carlos juntos fazendo um coração">
+        <h3>Vibrante.</h3>
+        <p>Um lugar de altos e baixos.</p>
+    </div>
+</section>
+
+<!-- Modal para exibição de projetos -->
+<div id="projeto1" class="modal">
+    <div class="modal-content">
+        <div class="flower-animation"></div>
+        <span class="close" onclick="closeModal('projeto1')">&times;</span>
+        <h2>Estelares</h2>
+        <p>Apesar de tudo, estamos aqui juntas. Apesar de todas as experiências que passamos, vocês estiveram lá, me mostrando o caminho, guiando-me e ajudando a identificar onde eu estava, sempre me apoiando. Vocês me tiraram risadas, discutiram assuntos sérios e, do nada, transformaram tudo em piada, trazendo sentido e direção à minha vida. Vocês me ensinaram e demonstraram tudo o que tinham de bom. Espero algum dia retribuir tudo de bom que fizeram por mim e que, em algum momento, eu tenha sido pelo menos um pouco do que vocês foram para mim. Obrigada por estarem na minha vida, minhas queridas!</p>
+        <p>Essa palavra remete a estrelas, sugerindo que vocês são brilhantes e iluminam a vida. Vocês como fonte de inspiração e apoio, assim como estrelas que guiam o caminho.</p>
+        <img src="img/2021veyr.jpeg" alt="2021 né veyr" class="modal-image">
+
+    </div>
+</div>
+
+<div id="projeto2" class="modal">
+    <div class="modal-content">
+        <div class="flower-animation"></div>
+        <span class="close" onclick="closeModal('projeto2')">&times;</span>
+        <h2>Meu conforto.</h2>
+        <p>Eu e Gabriella somos amigas e nos conhecemos na escola, embora não nesta em que estamos agora. Nossa amizade é algo que considero muito especial, daquelas que fazem você brilhar e te acompanham em todos os caminhos que você decide seguir. É uma amizade que sempre te aconselha da maneira correta para que você chegue onde deseja. Indescritível, ela me conforta porque sei que é única. Mesmo diante dos 'tsunamis' da vida, ela permanece firme. Sempre que penso nela, sinto que a vida não seria a mesma sem Gabriella ao meu lado.
+        </p> 
+        <p>   Eu considero a Gabriella ímpar, pois ela é única e diferente, não se encaixando em padrões comuns. Para mim, isso destaca o quão excepcional ela é como amiga. A amizade que temos é especial e única, assim como ela!
+        </p>
+        <img src="img/eueagabisnasala.jpeg" alt="Gabi e eu na sala tirando foto" class="modal-image">
+    </div>
+</div>
+
+<div id="projeto3" class="modal">
+    <div class="modal-content">
+        <div class="flower-animation"></div>
+        <span class="close" onclick="closeModal('projeto3')">&times;</span>
+        <h2>Diversa.</h2>
+        <p>Às vezes, nem sempre o que parece ruim realmente é. A maneira de julgar pode ser equivocada. É isso que penso ao lembrar da forma como me sentia quando entrei na sala em que estou hoje. No entanto, com o passar do tempo, esses pensamentos mudaram. Hoje, não quero sair dessa sala. Apesar de tudo, às vezes é confortante estar e conviver nesse ambiente. Às vezes, sinto falta do que vivi nos anos passados, mas ficar presa a isso não muda a sensação de pertencimento. Essa sensação se mantém quando estamos juntos, e isso é o mais interessante.</p>
+        <p>Eu considero minha sala diversa, com pessoas diferentes e experiências variadas. Embora não sejamos todos superinteligentes, essa diversidade traz um ambiente interessante e nos ajuda a aprender uns com os outros. Cada um tem algo único a oferecer, e isso fortalece nosso senso de pertencimento e amizade.</p>
+        <p>Apesar das brigas.</p>
+        <img src="img/WhatsApp Image 2024-10-12 at 16.30.25.jpeg" alt="Imagem do Projeto 3" class="modal-image">
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Alla Xisto. Todo tipo de arte importa.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/manuelyxisto/profilecard/?igsh=MWF1OHJibHFydWlxNw==" target="_blank">Instagram</a>
+            <a href="https://pin.it/4YaAREJ6G" target="_blank">Pinterest</a>
+            <a href="https://cursos.alura.com.br/user/" target="_blank">Alura</a>
+            <a href="https://github.com/LaninhaXisto" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+<footer>
+    <div class="footer-content">
+        <div class="flower-footer"></div>
+        <!-- Conteúdo do rodapé -->
+        <div class="flower-footer"></div>
+        <div class="flower-footer flower1"></div>
+        <div class="flower-footer flower2"></div>
+        <div class="flower-footer flower3"></div>
+    </div>
+</footer>
+
+
+</body>
+</html>
